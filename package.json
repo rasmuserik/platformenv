@@ -1,0 +1,23 @@
+{
+    "name": "platformenv",
+    "version": "0.0.0",
+    "title": "platformenv",
+    "description": "This is a microlibrary with a single function `platformenv.define(global)`, that sets a number of predicates on the global object:`isNodeJs`, `isDevServer`, `isTesting`, and maybe more in the future.\n\nMainly used with solapp apps.\n\nInclude as: `require(\"platformenv\").define global if typeof isNodeJs != \"boolean\"` in coffeescript, to make sure it is optimised away in uglifyjs.\n(The whole reason to have a library that sets properties on the global object is that they can be optimised away, including dead code removal, by uglifyjs when they are defined by the preprocessor).",
+    "npmjs": true,
+    "webjs": true,
+    "fullname": "platformenv",
+    "author": "Rasmus Erik Voel Jensen (solsort.com)",
+    "owner": "rasmuserik",
+    "main": "platformenv.js",
+    "scripts": {
+        "start": "node ./node_modules/solapp/solapp.js start",
+        "test": "node ./node_modules/solapp/solapp.js test"
+    },
+    "dependencies": {
+        "solapp": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/rasmuserik/platformenv.git"
+    }
+}
