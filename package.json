@@ -1,6 +1,6 @@
 {
     "name": "platformenv",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "title": "platformenv",
     "description": "This is a microlibrary with a single function `platformenv.define(global)`, that sets a number of predicates on the global object:`isNodeJs`, `isDevServer`, `isTesting`, and maybe more in the future.\n\nMainly used with solapp apps.\n\nInclude as: `require(\"platformenv\").define global if typeof isNodeJs != \"boolean\"` in coffeescript, to make sure it is optimised away in uglifyjs.\n(The whole reason to have a library that sets properties on the global object is that they can be optimised away, including dead code removal, by uglifyjs when they are defined by the preprocessor).",
     "npmjs": true,
